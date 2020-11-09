@@ -1,7 +1,9 @@
 from django.urls import path
-from . import views
+from .views import index, gambit
 
 urlpatterns = [
-    path('', views.index),
-    # path ('about', views.about)
+    path('', index),
+    # path('htmltrain', htmltrain),
+    # path ('about', about)
+    path('gambit', gambit)
 ]

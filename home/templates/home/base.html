@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>
+        {% block title %}
+
+        {% endblock title %}
+    </title>
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
+</head>
+
+
+<body>
+  <h2 class="h2">Queen's Gambit</h2>
+  <nav>
+      <a class="link" href="https://en.wikipedia.org/wiki/The_Queen%27s_Gambit_(miniseries)">About</a>
+      <a class="link" href="https://www.imdb.com/title/tt10048342/fullcredits">Cast</a>
+      <a class="link" href="">Trailer</a>
+      <a class="link" href="https://www.netflix.com/browse">Watch it on Netflix</a>
+  </nav>
+
+
+  <figure>
+      {% block content %}
+
+      {% endblock content %}
+  </figure>
+
+  <div>
+      {% block text %}
+
+      {% endblock text %}
+  </div>
+
+  <figure>
+      {% block imgs %}
+
+      {% endblock imgs %}
+  </figure>
+
+
+  <footer>
+      by Anastasiia Davydenko
+  </footer>
+
+</body>
+</html>
