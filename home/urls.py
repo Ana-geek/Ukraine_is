@@ -3,7 +3,6 @@ from .views import index, gambit, multipage, amongus, sign_in, register
 
 urlpatterns = [
     path('', index, name='homepage'),
-    path('/', index, name='homepage'),
     # path('htmltrain', htmltrain),
     path('gambit', gambit, name='gambit'),
     path('multi_page/<int:page_id>', multipage, name='multipage'),
