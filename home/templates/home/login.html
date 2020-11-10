@@ -1,0 +1,38 @@
+{% extends 'home/base2.html' %}
+{% load static %}
+
+
+{% block title %}
+    LOGIN
+{% endblock title %}
+
+
+{% block link %}
+    <a class="link" href="{% url 'homepage' %}"> Home page</a>
+    <a class="link" href="{% url 'gambit' %}">Gambit page</a>
+    <a class="link" href="{% url 'amongus' 1 %}">Among us</a>
+    <a class="link" href="{% url 'register' %}">Register</a>
+    <a class="link" href="{% url 'loginpage' %}">Login</a>
+{% endblock link %}
+
+
+
+{% block content %}
+    <form class="form" action="/login" method="post">
+
+        <p class="text"><label  for="login_field">Login</label>
+            <input id="login_field" name="login_field" type="text" placeholder="Enter your login"></p>
+
+        <p class="text"><label for="password_field">Password</label>
+            <input id="password_field" name="password_field" type="password" placeholder="Enter your password"></p>
+
+        <button>
+            Login
+        </button>
+
+        <button>
+            Cancel
+        </button>
+
+    </form>
+{% endblock content %}

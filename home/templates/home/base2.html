@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>
+        {% block title %}
+
+        {% endblock title %}
+    </title>
+    <link rel="stylesheet" href="{% static 'css/among.css' %}">
+    <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Stencil+Text:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/forms.css' %}">
+    <link rel="icon" href="{% static 'img/icon.jpg' %}">
+</head>
+
+
+<body>
+  <h2 class="h2">IMPOSTER Among Us</h2>
+  <nav class="nav">
+      {% block link %}
+
+      {% endblock link %}
+  </nav>
+
+
+  <div class="div">
+      {% block content %}
+
+      {% endblock content %}
+  </div>
+
+
+  <footer>
+      by Anastasiia Davydenko
+  </footer>
+
+</body>
+</html>

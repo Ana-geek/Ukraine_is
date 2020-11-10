@@ -14,7 +14,7 @@ body {background: #BFAAA3;
     border: 2px solid grey;
 }
 
-nav{
+.nav{
     background: #092124;
     color: #BFAAA3;
     height: 26px;
@@ -45,7 +45,7 @@ img{
     border-radius: 10px;
 }
 
-div{
+.div{
     background: #C38466;
     padding: 10px;
     margin: 30px;

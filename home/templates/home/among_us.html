@@ -1,0 +1,55 @@
+{% extends 'home/base2.html' %}
+{% load static %}
+
+{% block title %}
+    Among Us!
+{% endblock title %}
+
+
+
+{% block link %}
+    <a class="link" href="{% url 'homepage' %}"> Home page</a>
+    <a class="link" href="{% url 'gambit' %}">Gambit page</a>
+    <a class="link" href="{% url 'amongus' 1 %}">Among us</a>
+    <a class="link" href="{% url 'register' %}">Register</a>
+    <a class="link" href="{% url 'loginpage' %}">Login</a>
+{% endblock link %}
+
+
+
+{% block content %}
+    <div class="text2">
+        HELLO PLAYER_{{ page__id }}_
+        {{ text | title }}
+    </div>
+
+
+    {% for role in roles %}
+        <div class="card" >
+            {% if role == 'impostor'%}
+               [DANGER!]
+            {% endif %}
+            {{ role | title }}
+        </div>
+    {% endfor %}
+    <br>
+
+
+    {%for num in players%}
+        <div class="div2">
+        <a class="link2" href='/among_us/{{ num }}'> Player_ {{ num }} </a>
+        </div>
+
+    {% endfor %}
+
+        <p class="text"> RULES </p>
+        <p class="text"> - Crewmates shall know and be well aware of who the impostor is in the game. </p>
+        <p class="text"> - Before the game starts, the impostor shall stand still and give a countdown of 20 seconds in the starting point of the lobby, and crewmates are supposed to utilize those few seconds for a head start to complete their tasks as fast as they can. </p>
+        <p class="text"> - Crewmates cannot fix lights sabotaged by the impostor. </p>
+        <p class="text"> - Impostors are not allowed to sabotage the map other than switching off the lights.Dead bodies in the game can't be reported.</p>
+        <p class="text"> - No Emergency Meetings can be called in-game. </p>
+        <p class="text"> - Crewmates need to finish all their tasks to win the game before the impostor kills the entire crew.</p>
+
+{% endblock content %}
+
+

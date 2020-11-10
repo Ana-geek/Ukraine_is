@@ -1,0 +1,46 @@
+{% extends 'home/base.html' %}
+{% load static %}
+
+{% block title %}
+    Multi Page {{ page__id }}
+{% endblock title %}
+
+{% block link %}
+    <link rel="stylesheet" href="{% static 'css/multipage.css' %}">
+{% endblock link %}
+
+{% block content %}
+<div>
+    HELLo world {{ page__id }}<br>
+    Answer - {{ text | title }}
+</div>
+<a href="{% url 'homepage' %}"> Home page</a>
+<a href="{% url 'gambit' %}">Gambit page</a>
+<a href="{% url 'multipage' 1 %}">Multi page</a>
+
+{{ animals }}
+<br>
+
+
+{% for animal in animals%}
+
+
+<div class="card" >
+    {% if animal == 'owl'%}
+       DANGER!
+    {% endif %}
+    {{ animal }}  </div>
+{% endfor %}
+<br>
+
+
+{%for num in range%}
+<a href='/multi_page/{{ num }}'>link {{ num }} </a>
+{% endfor %}
+
+{% endblock content %}
+
+
+
+
+

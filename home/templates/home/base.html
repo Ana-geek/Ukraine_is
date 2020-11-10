@@ -10,12 +10,17 @@
         {% endblock title %}
     </title>
     <link rel="stylesheet" href="{% static 'css/base.css' %}">
+
+    {% block link %}
+
+    {% endblock link %}
+
 </head>
 
 
 <body>
   <h2 class="h2">Queen's Gambit</h2>
-  <nav>
+  <nav class="nav">
       <a class="link" href="https://en.wikipedia.org/wiki/The_Queen%27s_Gambit_(miniseries)">About</a>
       <a class="link" href="https://www.imdb.com/title/tt10048342/fullcredits">Cast</a>
       <a class="link" href="">Trailer</a>
@@ -29,7 +34,7 @@
       {% endblock content %}
   </figure>
 
-  <div>
+  <div class="div">
       {% block text %}
 
       {% endblock text %}
